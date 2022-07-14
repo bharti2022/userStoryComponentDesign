@@ -15,6 +15,7 @@ const Modal = ({open, ModalComponent}:{open:boolean, ModalComponent:any}) => {
       )}
     </>
   );
+
 };
 
 export default Modal;

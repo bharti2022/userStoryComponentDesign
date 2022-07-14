@@ -16,6 +16,6 @@ const Banner = ({imgSrc,text}:{imgSrc:string,text:string}) => {
          </Grid>
          </>
   )
-};
+}
 
 export default Banner;

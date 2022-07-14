@@ -8,6 +8,7 @@ const LabelWithIcon = ({imgSrc,text}) => {
       <Image imgSrc={imgSrc}/>
       <Typography>{text}</Typography>
     </div>
+
   )
 }
 

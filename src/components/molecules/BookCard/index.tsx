@@ -20,6 +20,7 @@ const BookCard = (props) => {
         </CardContent>
         </Card>
   </>)
+
 };
 
 export default BookCard;

@@ -19,6 +19,7 @@ import up from "../../../assets/icons/up.png";
 import { useNavigate } from "react-router";
 import DropComp from "../expandtobar/ExploreDropDownComponent";
 import ClearRoundedIcon from "@mui/icons-material/ClearRounded";
+import SearchResult from "../../molecules/SearchResults/SearchResult";
 
 function Header() {
   const [underLine, setUnderLine] = useState("0px");
@@ -98,27 +99,7 @@ function Header() {
                       DropComp={() => {
                         return (
                           <>
-                            {suggestions &&
-                              suggestions.map((suggestion: any, i) => {
-                                return (
-                                  <>
-                                    <div
-                                      className={classes.suggestion}
-                                      key={i}
-                                      onClick={() => {
-                                        onSuggestHandler(suggestion.name);
-                                        navigate(
-                                          `/bookdetailviewpage/${suggestion.id}`
-                                        );
-                                      }}
-                                    >
-                                      {suggestion.name +
-                                        " by " +
-                                        suggestion.author}
-                                    </div>
-                                  </>
-                                );
-                              })}
+                           <SearchResult list={suggestions}/>
                           </>
                         );
                       }}

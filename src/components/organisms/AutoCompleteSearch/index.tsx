@@ -1,9 +1,18 @@
-import React from 'react'
+import CustomTextField from "../../atoms/TextField";
 
-const index = (placeholder,startIcon) => {
+const index = ({ bookList, iconSrc, iconPosition }:{bookList:string[], iconSrc:string, iconPosition:string}) => {
   return (
-    <div>AutoCompletewithlistof book</div>
-  )
-}
+    <>
+      <CustomTextField
+        data={bookList}
+        iconPosition="start"
+        Icon={iconSrc}
+      ></CustomTextField>
+      <div>
+        {"suggestions"}
+      </div>
+    </>
+  );
+};
 
-export default index
+export default index;

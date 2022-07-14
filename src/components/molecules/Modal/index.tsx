@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Modal = (open, component) => {
+const Modal = ({open, ModalComponent}:{open:boolean, ModalComponent:any}) => {
   const [open, isOpen] = useState(open);
   const handleClick = () => {
     isOpen(false);
@@ -8,8 +8,9 @@ const Modal = (open, component) => {
   return (
     <>
       {open && (
-        <div><Image src="close.png" onClick={handleClick}/>
-          <component />
+        <div>
+          <Image src="close.png" onclick={handleClick}/>
+          <ModalComponent />
         </div>
       )}
     </>
